@@ -1,0 +1,22 @@
+Name     fullAdder.dig ;
+PartNo   00 ;
+Date     29.11.2020 ;
+Revision 01 ;
+Designer link ;
+Company  unknown ;
+Assembly None ;
+Location unknown ;
+Device   g16v8a ;
+
+/* inputs */
+PIN 2 = A;
+PIN 3 = B;
+PIN 4 = Ci;
+
+/* outputs */
+PIN 12 = Co;
+PIN 13 = S;
+
+/* combinatorial logic */
+Co = (A & Ci) # (A & B) # (B & Ci);
+S = (!A & !B & Ci) # (!A & B & !Ci) # (A & !B & !Ci) # (A & B & Ci);
